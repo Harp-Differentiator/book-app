@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Firebase.Firestore;
+using Firebase;
 
 namespace book_exchange.Droid
 {
@@ -23,12 +25,35 @@ namespace book_exchange.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
             LoadApplication(new App());
+
+            FirebaseFirestore database = GetDataBase();
         }
+
+        public FirebaseFirestore GetDataBase()
+        {
+            FirebaseFirestore database;
+
+            var options = new FirebaseOptions.Builder()
+                .SetProjectId("book-exchange-6ea4c")
+                .SetApplicationId("book-exchange-6ea4c")
+                .SetApiKey("AIzaSyDX3QsgZtmGYiiQ-BGM1qcVk_1Mr_wY3b0")
+                .SetDatabaseUrl("https://book-exchange-6ea4c-default-rtdb.firebaseio.com")
+                .SetStorageBucket("book-exchange-6ea4c")
+                .Build();
+
+            var app = FirebaseApp.InitializeApp(this, options);
+            database = FirebaseFirestore.GetInstance(app);
+
+            return database;
+
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }

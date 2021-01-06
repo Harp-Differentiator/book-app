@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "684154497995",
+    "firebase_url": "https://book-exchange-6ea4c-default-rtdb.firebaseio.com",
+    "project_id": "book-exchange-6ea4c",
+    "storage_bucket": "book-exchange-6ea4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684154497995:android:cacb8c24ee9e17cfe0644e",
+        "android_client_info": {
+          "package_name": "com.companyname.book_exchange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684154497995-7u2oms2jl31n53k1apglmj0cdjthdof1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX3QsgZtmGYiiQ-BGM1qcVk_1Mr_wY3b0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684154497995-7u2oms2jl31n53k1apglmj0cdjthdof1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "684154497995-00akm4futpg6pcpnj3ad48n6hokccjh3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.companyname.bookexchange"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
